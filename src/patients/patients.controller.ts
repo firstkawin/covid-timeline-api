@@ -33,7 +33,6 @@ export class PatientsController {
       name: body.name,
     });
     if (patient) {
-      console.log(patient);
       throw new NotAcceptableException('name already exists');
     }
     await this.patientsService.createPatient(body);
